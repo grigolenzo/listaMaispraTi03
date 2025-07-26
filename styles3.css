@@ -1,0 +1,26 @@
+.menu-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+@media (max-width: 600px) {
+  .menu-links {
+    display: none;
+    flex-direction: column;
+  }
+
+  .menu-links.ativo {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
