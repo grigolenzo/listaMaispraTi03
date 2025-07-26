@@ -1,26 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu Hamburger</title>
-  <link rel="stylesheet" href="styles3.css">
+  <title>Hamburgueria - Menu</title>
+  <link rel="stylesheet" href="galeria.css">
 </head>
 <body>
-  <nav class="menu">
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <ul class="menu-links">
-      <li><a href="#">Início</a></li>
-      <li><a href="#">Sobre</a></li>
-      <li><a href="#">Contato</a></li>
-    </ul>
-  </nav>
-
+  <header class="header-hamburgueria">
+    <nav class="navbar">
+      <h1 class="titulo">Hamburgueria</h1>
+      <button class="hamburger" aria-label="Abrir menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="menu-info">
+      <h2>Bem-vindo à Hamburgueria!</h2>
+      <p>
+        Descubra nossos hambúrgueres artesanais feitos com ingredientes frescos e selecionados. 
+        Temos opções clássicas, especiais, veganas e muito mais para todos os gostos.
+      </p>
+      <a class="btn-galeria" href="galeria.html">Ver Galeria de Hambúrgueres</a>
+    </section>
+  </main>
   <script>
-    function toggleMenu() {
-      const menu = document.querySelector('.menu-links');
-      menu.classList.toggle('ativo');
-    }
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
   </script>
 </body>
 </html>

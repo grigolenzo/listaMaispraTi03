@@ -1,23 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galeria</title>
-  <link rel="stylesheet" href="styles2.css">
+  <title>Hamburgueria</title>
+  <link rel="stylesheet" href="galeria.css">
 </head>
 <body>
-  <div class="galeria-container">
-    <div class="galeria">
-      <figure><img src="img1.jpg" alt="Imagem 1"><figcaption>lago 1</figcaption></figure>
-      <figure><img src="img2.jpg" alt="Imagem 2"><figcaption>lago 2</figcaption></figure>
-      <figure><img src="img3.jpg" alt="Imagem 3"><figcaption>lago 3</figcaption></figure>
-      <figure><img src="img4.jpg" alt="Imagem 4"><figcaption>lago 4</figcaption></figure>
-      <figure><img src="img5.jpg" alt="Imagem 5"><figcaption>lago 5</figcaption></figure>
-      <figure><img src="img6.jpg" alt="Imagem 6"><figcaption>lago 6</figcaption></figure>
-      <figure><img src="img7.jpg" alt="Imagem 7"><figcaption>lago 7</figcaption></figure>
-      <figure><img src="img8.jpg" alt="Imagem 8"><figcaption>lago 8 v2</figcaption></figure>
+  <header class="header-hamburgueria">
+    <nav class="navbar">
+      <h1 class="titulo">Hamburgueria</h1>
+      <button class="hamburger" aria-label="Abrir menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Galeria</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="flex-galeria">
+      <div class="grid-galeria">
+        <figure>
+          <img src="img1.jpg" alt="Hambúrguer Clássico">
+          <figcaption>Clássico</figcaption>
+        </figure>
+        <figure>
+          <img src="img2.jpg" alt="Hambúrguer Bacon">
+          <figcaption>Bacon</figcaption>
+        </figure>
+        <figure>
+          <img src="img3.jpg" alt="Hambúrguer Cheddar">
+          <figcaption>Cheddar</figcaption>
+        </figure>
+        <figure>
+          <img src="img4.jpg" alt="Hambúrguer Vegano">
+          <figcaption>Vegano</figcaption>
+        </figure>
+        <figure>
+          <img src="img5.jpg" alt="Hambúrguer Frango">
+          <figcaption>Frango</figcaption>
+        </figure>
+        <figure>
+          <img src="img6.jpg" alt="Hambúrguer Duplo">
+          <figcaption>Duplo</figcaption>
+        </figure>
+        <figure>
+          <img src="img7.jpg" alt="Hambúrguer Especial">
+          <figcaption>Especial</figcaption>
+        </figure>
+        <figure>
+          <img src="img8.jpg" alt="Hambúrguer Artesanal">
+          <figcaption>Artesanal</figcaption>
+        </figure>
+      </div>
     </div>
-  </div>
+  </main>
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>

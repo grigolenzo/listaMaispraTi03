@@ -1,37 +1,135 @@
+header, main, footer {
+    margin: 16px 0;
+    padding: 16px;
+    border-radius: 8px;
+}
+
 header {
-  background-color: #003366;
-  color: white;
-  margin: 20px;
-  padding: 20px;
-  border: 2px solid #000;
+    background-color: #2563eb; /* azul forte */
+    color: #fff;
+    border: 2px solid #1e40af;
 }
 
 main {
-  background-color: #f0f0f0;
-  color: #000;
-  margin: 20px;
-  padding: 20px;
-  border: 2px solid #ccc;
+    background-color: #e0e7ff; /* azul claro */
+    color: #1e293b;
+    border: 2px solid #60a5fa;
 }
 
 footer {
-  background-color: #333;
-  color: white;
-  margin: 20px;
-  padding: 20px;
-  border: 2px solid #000;
+    background-color: #1e40af; /* azul escuro */
+    color: #fff;
+    border: 2px solid #2563eb;
 }
 
+/* Estilo para todas as tags <h2> */
 h2 {
-  font-size: 1.5em;
+  font-size: 2rem;
   text-decoration: underline;
 }
 
+/* Classe .destaque */
 .destaque {
   font-style: italic;
-  background-color: #ffffcc;
+  background-color: #dbeafe;
 }
 
+/* ID #importante */
 #importante {
-  border-top: 4px solid red;
+  border-top: 4px solid #2563eb;
+}
+
+/* Flexbox para centralizar galeria */
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0;
+}
+
+/* Grid da galeria */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.gallery-grid figure {
+  background: #e0e7ff;
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px #0001;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Responsividade Grid */
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Menu Hamburger */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: #2563eb;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Hamburger aparece, menu padrão some em telas pequenas */
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #2563eb;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    padding: 16px 0;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
 }
